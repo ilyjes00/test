@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트에 테두리생성</title>
+    <style>
+h1 {
+    text-align: center;
+    background: rgba(0, 128, 0, 0.6);  /* rgba = rgb에 a는 불투명도*/
+    color: white;
+    font-size: 35px;
+}
+p {
+    font-size: 20px;
+}
+
+#hy1 { /*id hy1에 보더를이용한 테두리생성 */
+    border: 3px solid tomato;
+    font-size: 20px;
+}
+#hy1 {border-style: dotted;
+    border-radius: 15px; /*테두리의 둥근형태의 강도*/
+}
+
+#hy2 {border-style: dashed;
+    border-width: 25px 10px 4px 35px; /* 25px 위, 10px 오른쪽, 4px 아래 and 35px 왼쪽 순서 */
+}
+#hy3 {border-style: solid;}
+#hy4 {border-style: double;}
+#hy5 {border-style: groove;}
+#hy6 {border-style: ridge;}
+#hy7 {border-style: inset;}
+#hy8 {border-style: outset;}
+#hy9 {border-style: none;}
+#hy10 {border-style: hidden;}
+#hy11 {border-style: dotted dashed solid double;}
+
+    </style>
+</head>
+<body>
+    <h1>텍스트에 테두리생성</h1>
+    <p id="hy1"> 텍스트1</p>
+    <p id="hy2"> 텍스트1</p>
+    <p id="hy3"> 텍스트1</p>
+    <p id="hy4"> 텍스트1</p>
+    <p id="hy5"> 텍스트1</p>
+    <p id="hy6"> 텍스트1</p>
+    <p id="hy7"> 텍스트1</p>
+    <p id="hy8"> 텍스트1</p>
+    <p id="hy9"> 텍스트1</p>
+    <p id="hy10"> 텍스트1</p>
+    <p id="hy11"> 텍스트1</p>
+</body>
+</html>

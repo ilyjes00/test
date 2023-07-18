@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Math.random() , 메서드 간단한 응용1</h1>
+    <p>콘솔로그로 예제확인</p>
+    <p id="demo"></p>
+    <script>
+        /* 
+        Math.random() : 0.0 <= x < 1.0  (random선언을하면 1.0미만의함수가 랜덤으로 만들어짐)
+        Math.random() * 10 ; 0.00 <= x < 10.0       (10을 곱함으로써 0 ~ 1.0미만에서 0~10미만의함수가 랜덤으로만들어짐)
+
+        */
+       //0~9 범위의 숫자를 랜덤으로 가져오는 구문
+        let x = Math.floor(Math.random()*10);
+        console.log ("x의 값은:? " ,x);
+        //0~10 범위의 숫자를 랜덤으로 가져오는 구문
+        x = Math.floor(Math.random()*11);
+        console.log ("x의 값은:? " ,x);
+        //0~99 범위의 숫자를 랜덤으로 가져오는 구문
+        x = Math.floor(Math.random()*100);
+        console.log ("x의 값은:? " ,x);
+        //0~100 범위의 숫자를 랜덤으로 가져오는 구문
+        x = Math.floor(Math.random()*101);
+        console.log ("x의 값은:? " ,x);
+        //1~10 범위의 숫자를 랜덤으로 가져오는 구문  ///  1을 더함으로써 10의범위를만들기위해 random 값앞에 1을더할필요가 사라짐
+        x = Math.floor(Math.random()*10) + 1;
+        console.log ("x의 값은:? " ,x);
+        //1~100 범위의 숫자를 랜덤으로 가져오는 구문
+        x = Math.floor(Math.random()*100) + 1;
+        console.log ("x의 값은:? " ,x);
+    </script>
+</body>
+</html>

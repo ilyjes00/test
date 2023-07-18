@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>반복문 : for문</h1>
+    <p id="demo"></p>
+    <script>
+        let text = "";
+        /*
+        document.writeln("자바스크립트를 배우자");
+        document.writeln("자바스크립트를 배우자");
+        document.writeln("자바스크립트를 배우자");
+        document.writeln("자바스크립트를 배우자");
+        document.writeln("자바스크립트를 배우자");
+        document.writeln("자바스크립트를 배우자");
+        document.writeln("자바스크립트를 배우자");
+        document.writeln("자바스크립트를 배우자");
+        document.writeln("자바스크립트를 배우자");
+        document.writeln("자바스크립트를 배우자");
+        */
+        /*
+        }
+        for((1) ; (2) ;  (4))  for문이 작동되는 순서 1->2->3->4
+            (3) 
+        }
+
+        1)for문 안에서 사용할 변수선언
+        2)변수를 이용한 조건식
+        3) 2)번에서 조건식이 true 이면 , 동작할 코드삽입
+            */
+       for(let i = 0; i<=10; i++){  // 1. 변수 0을선언 2.i가 10이하일경우 계속선언 3. i에 1씩 추가
+        text += "자바스크립트를 배우자<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+    </script>
+</body>
+</html>

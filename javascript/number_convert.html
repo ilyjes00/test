@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function plus() {
+            let num1 = document.getElementById("num1").value;
+            let num2 = document.getElementById("num2").value;
+
+            console.log(typeof num1); //string
+            console.log(typeof num2); //string
+
+            document.getElementById("result").value = parseInt(num1) + parseInt(num2);  // parseint = string값을 정수로 변환
+        }
+
+    </script>
+</head>
+<body>
+    <h1>숫자 형변환</h1>
+    <input type="text" id="num1"> + <input type="text" id="num2"> = <input type="text" id="result">
+    <br>
+    <button type="button" onclick="plus()">더하기</button>
+</body>
+</html>

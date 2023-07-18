@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>배열 정렬(sort)</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        const fruits = ["Banana","Mango","Apple","Orange"]; 
+        //"Banana" -> "banana" 대문자를 소문자로 변경해보면 정렬결과가 다르다 이유는 유니코드순서차이?
+
+        // B:066   , O:079    ,A:065     M:077            대문자와 소문자의차이는 32 만큼 차이난다 ex) A= 065 a=097
+        document.getElementById("demo1").innerHTML = fruits;
+        //사전순으로 정렬 ex) abc or 가나다 , 유니코드표 (Uni Code) 0 ~ 65535 , 아스키코드 (ASCII Code)0 ~ 127
+        //내림차순 명령어는 지원안한다.
+        fruits.sort(); //오름차순
+        document.getElementById("demo2").innerHTML = fruits;
+        
+        fruits.reverse(); //역순, 결과가 내림차순
+        document.getElementById("demo3").innerHTML = fruits;
+
+    </script>
+</body>
+</html>

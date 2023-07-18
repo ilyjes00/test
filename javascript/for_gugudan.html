@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+   
+<body>
+    <h1>for문으로 구구단만들기</h1>
+    <script>
+        document.write("<table border='1'>")
+        for(let gop = 0; gop <=9; gop++){  //1부터 9까지 반복되는 for문
+            document.write("<tr>");
+
+
+            for(let dan = 2; dan <=9; dan++){ //2부터 9까지 반복되는 for문을
+                if(gop == 0){
+                    document.write(`<td>${dan} 단</td>`); // 제목행 1번만 출력
+                }else {
+                document.write(`<td>${dan} * ${gop} = ${dan * gop}</td>`); //dan*gop 으로 1x2부터 9x9까지 반복하게만듬
+                }
+            }
+            document.write("</tr>")
+        }
+        document.write("</table>")
+    </script>
+</body>
+</html>

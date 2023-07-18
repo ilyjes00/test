@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //버튼클릭 3초가 경과된후에 호출됨.
+        function myfunction() {
+            alert("안녕");
+        }
+    </script>
+</head>
+<body>
+    <h1>window객체의 setTimeout() 메서드</h1>
+    <button type="button" onclick="myVar = setTimeout(myfunction, 3000)">버튼</button>
+    <button type="button" onclick="clearTimeout(myVar)">정지</button>
+</body>
+</html>

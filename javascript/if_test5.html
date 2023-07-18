@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        let time = new Date().getHours();
+        let msg = "";
+
+        if (time <= 12){
+            msg = "오전입니다";
+        }
+        else {
+            msg = "오후입니다";
+        }
+        document.getElementById("demo").innerHTML = `현재시각은 ${time}시  ${msg}`
+    </script>
+</body>
+</html>

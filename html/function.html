@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Image Maps</h2>
+
+<p>Click on the cup of coffee to execute a JavaScript function:</p>
+
+<img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+<map name="workmap">
+  <area shape="circle" coords="337,300,44" href="https://www.w3schools.com/html/coffee.htm" onclick="alert('you touch coffee cup')"> <!--밑에 스크립트 양식없이 이용한 명령어-->
+
+
+  <area shape="circle" coords="337,300,44" href="https://www.w3schools.com/html/coffee.htm" onclick="myFunction()"> <!--밑에 스크립트 양식을이용한 명령어-->
+</map>
+
+<script>
+function myFunction() {
+  alert("You clicked the coffee cup!");
+}
+</script>
+
+</body>
+</html>

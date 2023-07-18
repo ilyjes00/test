@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>별 출력하기</h1>
+    <p id="demo"></p>
+    <script>
+        document.write("<h3>별 5개 출력하기</h3>")
+        for(let i=0;i<5;i++){
+            document.write ("*")
+        }
+        document.write('<hr>');
+
+
+        document.write("<h3>정사각형 별 출력</h3>")
+        for(let i=0;i<5;i++){
+            for(let j=0;j<5;j++)  {  //j라는 for문을 i로 5번반복하게함 사이에 <br>을 집어넣어서 행을변경
+            document.write ("*");
+        }
+        document.write ("<br>")
+    }
+        document.write('<hr>');
+
+        document.write("<h3>삼각형 별 출력</h3>")
+
+        for (let k=0; k<5; k++){
+            for(let l =0 ; l<=k ; l++){
+                document.write ("*");
+            }
+            document.write ("<br>");
+        }
+        
+
+        document.write("<h3>삼각형 별 출력2</h3>")
+        for (let a=0; a<5; a++){
+            for (let b=5 ; b>a; b--){
+                document.write("*");
+            }
+            document.write ("<br>");
+        }
+
+        document.write("<h3>테스트 </h3>")
+        for (let c=0; c<5; c++){
+            for(let d=4; d>c; d--){
+                document.write("&nbsp");
+            }
+            for(let d=0; d<=c; d++){
+                document.write("*");
+
+            for(let d=1; d<=c; d++);{
+                document.write("*");  
+            }
+        }     
+        document.write("<br>")           
+    }
+        
+    </script>
+</body>
+</html>

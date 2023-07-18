@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>head와body에 스크립트적용하기</title>
+    
+    <script>
+        //자바스크립트 구문이 함수로 작성되어 있으면 <head> ,<body> 태그의 어떤위치도 상관은없지만 속도는 body태그에 적용시키는게 읽는속도가 더빠르다//
+        //함수정의
+            function myFunction() {
+        document.getElementById("demo1").innerHTML = '텍스트를 변경.';      
+        }
+    </script>
+</head> 
+<body>
+    <p id="demo1">텍스트</p>
+    <button onclick="myFunction()">클릭</button>
+</body>
+</html>

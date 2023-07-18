@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>노드(node) 추가하기</h1>
+<div id="course">
+    <p id="p1">자바</p>
+    <p id="p2">스프링</p>
+</div>
+<button type="button" id="demo" onclick="childremove()">엘리먼트 변경</button>
+<script>
+    function childremove(){
+    let parent = document.getElementById("course");
+    let child = document.getElementById("p1");
+
+    let para = document.createElement("p");
+    let txt = document.createTextNode("JAVA");
+
+    //속성추가
+    let attr = document.createAttribute("id");
+    attr.value = "p1";
+    para.setAttributeNode(attr); //<p id="p1"> </p>
+
+
+    para.appendChild(txt); //<p id="JAVA"> </p>
+
+    parent.replaceChild(para, child);
+    }
+</script>
+
+</body>
+</html>

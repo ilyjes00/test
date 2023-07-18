@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>노드(node) 추가하기</h1>
+<div id="course">
+    <p id="p1">자바</p>
+    <p id="p1">스프링</p>
+</div>
+<button type="button" id="demo" onclick="childAppend()">버튼</button>
+<button type="button" onclick="delete1()">삭제하기</button>
+<script>
+    function delete1() {
+        document.getElementById("p1").remove();
+    }
+function childAppend() {    
+const para= document.createElement("p"); // <p></p>
+const node = document.createTextNode("mybatis"); //"mybatis"
+para.appendChild(node); //<p>mybatis</p>
+
+const element = document.getElementById("course"); //div태그참조
+element.appendChild(para);
+}
+</script>
+
+</body>
+</html>
