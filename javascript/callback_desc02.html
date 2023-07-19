@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>함수의 순차적인 실행</h2>
+<p>함수가 각각 </p>
+
+<p>The result of the calculation is:</p>
+<p id="demo"></p>
+
+<script>
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+//함수내부에서 다른함수를 호출
+function myCalculator(num1, num2) {
+  let sum = num1 + num2;
+  myDisplayer(sum); //타 함수 호출
+}
+
+myCalculator(5, 5);
+</script>
+
+</body>
+</html>
