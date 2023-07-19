@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <colgroup>
+        <col style="background-color: aqua;">
+        </colgroup>
+
+        <tr>
+            <th>이름</th>
+            <td><input type="text" id=""></td>
+        </tr>
+        <tr>
+            <th>아이디</th>
+            <td><input type="text" id=""></td>
+        </tr>        <tr>
+            <th>비밀번호</th>
+            <td><input type="password" id=""></td>
+        </tr>        <tr>
+            <th>비밀번호확인</th>
+            <td><input type="password" id=""></td>
+        </tr>
+        <tr>
+            <th>생년월일/성별</th>
+            <td><input type="date" id="" name="birthday"</td>
+            <input type="radio" id="gender1" name="gender">남자
+            <input type="radio" id="gender1" name="gender">여자
+        </td>
+        </tr>
+        <>
+            <th>이메일</th>
+            <td>
+                <p>
+                <input type="text" id="email1">@<input type="text" id="email2">
+                <select class="select1" id="email3">
+                    <option>메일주소선택</option>
+                    <option value="naver.com">네이버</option>
+                    <option value="google.com">구글</option>
+                </select>
+                <input type="button" value="메일인증선택">
+                <br>
+                <input type="text" id="auth_confirm">
+                <input type="button" value="인증확인"
+            </p>
+            </td>
+        <tr>
+            <th>연락처</th>
+            <td>
+                <p>
+                    휴대전화<input type="text" id="sTel">
+                    <br>
+                    일반전화<select class="select1" id="hTel1">
+                        <option>선택</option>
+                        <option value="02">서울</option>
+                        <option value="031">서울</option>
+                        <option value="042">서울</option>
+                    </select>
+                    <input type="text" id="hTel2">-<input type="text" id="hTel3">
+                </p>
+            </td>
+        </tr>
+        <tr>
+                <th>우편번호</th>
+                <td>
+                <input type="text" id="sample2_postcode" placeholder="우편번호">
+                <input type="button" onclick="sample2_execDaumPostcode()" value="주소검색"><br>
+                <input type="text" id="sample2_address" placeholder="주소">
+                <br>
+                <input type="text" id="sample2_detailAddress" placeholder="상세주소">
+                <input type="text" id="sample2_extraAddress" placeholder="참고항목"> </input>
+                </td>
+        </tr>
+        <tr>
+                <th>정보수신 여부</th>
+                <td>
+                    서비스및 이벤트 소식을 <input type="checkbox" id="rev_mail">Email로 수신하겠습니다. <input type="checkbox" id="rev_sms">SMS로 수신하겠습니다.
+                </td>
+        </tr>
+
+
+    </table>
+    
+    <p class="sumbit">
+        <input type="button" value="버튼" onclick="sendit();">
+        <input type="reset" value="리셋">
+    </p>
+    <script>
+        //이벤트 리스너작업
+        document.getElementById("email3").addEventListener("change", emailSelect);
+
+        function emailSelect() {
+            let email2 = document.getElementById("email2");
+            email2.value = document.getElementById("email3").value;
+        }
+
+    </script>
+</body>
+</html>
