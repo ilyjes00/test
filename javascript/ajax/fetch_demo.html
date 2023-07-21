@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>fetch()메서드를 이용한 ajax작업</h1>
+    <p id="demo"></p>
+    <button type="button" onclick="fetchload();">클릭</button>
+    <script>
+        function fetchload() {
+            let url = "https://jsonplaceholder.typicode.com/posts/1"
+            fetch(url)//promise 객체를 리턴
+            .then((Response) => Response.json()) //서버로부터 json 데이터를 수집
+            .then((data) =>  {
+                display(data); //object 개체
+            });
+        }
+
+
+        function display(data) {
+            console.log(data);
+
+            //아래 작업이 필요없다.
+            //let obj = JSON.parse(data); //javascript object
+
+            document.getElementById("demo").innerHTML =
+                `   <br> userID: ${data.userId} <br> id: ${data.id} <br> title: ${data.title}<br> body: ${data.body}`;
+
+        }
+    </script>
+</body>
+</html>
