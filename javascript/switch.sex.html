@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <p id="demo"></p>
+    <script>
+        const ssn = "123344-1234567"
+        let number = ssn.charAt(7); //parseInt(ssn.charAt(7)) = 문자열을 숫자열로 바꾸는 명령어
+        console.log("number", number);
+        console.log("type", typeof number); //number변수의 데이터타입 확인
+        let sex = "";
+
+        switch(number) {
+            case "1":  // ""string 값이라 case의 1을 따옴표로 감싸준것
+            case "3":
+            case "5":
+                sex = "남자";
+                break;
+            case "2":
+            case "4":
+            case "6":
+                sex = "여자"
+                break;
+        }
+
+        document.getElementById("demo").innerHTML = sex; 
+    </script>
+</body>
+</html>

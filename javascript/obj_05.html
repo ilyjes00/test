@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="alert('문서로딩시')"onunload="alert('문서로드아웃')">
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+
+
+    <script>
+        function selectInfo(obj) {
+            if (obj.value == "99"){
+                alert("다른언어를 선택하세요");
+
+            }else {
+                alert(obj.value);
+            }
+        }
+    </script>
+
+
+
+    <h1>이벤트 - onChange</h1>
+    <p>현재진행되고있는 프로그래밍 언어는?</p>
+
+
+
+
+
+    <select onchange="selectInfo(this)">
+        <option value="99">언어를선택하세요</option>
+        <option>HTML5/CSS3</option>
+        <option>JavaScript</option>
+        <option>Java</option>
+        <option>Oracle</option>
+        <option>spring</option>
+    </select>
+
+
+
+    <br>
+    <input type="text" onchange="alert('이벤트발생')">
+    <div id="div1" onmouseover="alert('div태그 위에')"onmouseout="alert('div태그영역벗어났을떄')"></div>
+    <input type="text" onkeydown="alert('onkeydown')"
+
+</body>
+
+</html>

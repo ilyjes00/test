@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>backstick ` 사용</h1>
+    <p id="demo1"></p> 
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        /*
+
+        백틱 (`) 기호안에 작은따음표 , 큰따음표, 변수및 연산가능
+
+        */
+
+
+    let text = `He's  "Johnny"`
+    document.getElementById("demo1").innerHTML = text; 
+
+    let firstName = "john";
+    let lastName = "Doe";
+
+    // text = "Welcome" + firstName + "," + lastName + "!";
+    text = `Welcome, ${firstName}, ${lastName}!`;
+
+    document.getElementById("demo2").innerHTML = text; 
+
+    let price = 10;
+    let VAT = 0.25;
+    let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;  //toFixed(2) 소숫점 두번쨰자리까지 사용가능하게함
+
+    document.getElementById("demo3").innerHTML = total; 
+    </script> 
+</body>
+</html>

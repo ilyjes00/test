@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수연습</h1>
+    <input type="text" id="num1"><br>
+    <input type="text" id="num2"><br>
+    <input type="button" value="+" onclick="add()">
+    <input type="button" value="-" onclick="sub()">
+    <input type="button" value="*" onclick="mul()">
+    <input type="button" value="/"onclick="div()">
+    <input type="button" value="%"onclick="mod()"><br>
+    <input type="text" id="result">
+    <script>
+        //두수의 합을 구하는 함수 : add(num1, num2)
+        //두수의 차이을 구하는 함수 : sub(num1, num2)
+        //두수의 곱을 구하는 함수 : mul(num1, num2)
+        //두수의 나눗셈을 구하는 함수 : div(num1, num2)
+        //두수의 나누었을 떄 나머지를 구하는 함수 : mod(num1, num2)
+    function add(){
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+
+        document.getElementById("result").value = parseInt(num1) + parseInt(num2);
+    }
+    function sub(){
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        document.getElementById("result").value = parseInt(num1) - parseInt(num2);
+    }
+    function mul(){
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        document.getElementById("result").value = parseInt(num1) * parseInt(num2);
+    }
+    function div(){
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        document.getElementById("result").value = parseInt(num1) / parseInt(num2);
+    }
+    function mod(){
+        let num1 = document.getElementById("num1").value;
+        let num2 = document.getElementById("num2").value;
+        document.getElementById("result").value = parseInt(num1) % parseInt(num2);
+    }
+
+
+    </script>
+</body>
+</html>

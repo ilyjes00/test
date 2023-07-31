@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        // 1) form태그의 하위개념으로 input태그를 참조
+        // document.forms["myForm"]["u_name"]
+
+        // 2) input 태그의 id="u_name" 으로 참조
+        // document.getElementbyid("u_name")
+
+        function sendit(){
+            //let x = document.forms["myForms"]["u_name"].value; //or [0]
+            let x = document.getElementById("u_name").value
+            if(x == "") {
+                alert("이름을 입력하세요");
+                //document.forms["myForm"]["u_name"].focus();
+                document.getElementById("u_name").focus();
+                return;
+            }
+            document.forms["myForm"].submit();
+        }
+    </script>
+</head>
+<body>
+    <h1>form validation(폼 유효성검사)</h1>
+    <form name="myForm" action="join_ok.html">
+        이름: <input type="text" name="u_name" id="u_name"><br>
+        <input type="button" value="전송" onclick="sendit()">
+    </form>
+</body>
+</html>

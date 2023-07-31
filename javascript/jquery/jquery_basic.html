@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        // jquery 코드작성을위한 기본구문
+        $(document).ready(function() {
+            $("CSS선택자")
+                $("p").click(function() {
+                    $(this).hide();
+                });
+        });
+        </script>
+</head>
+<body>
+    <p id="demo1">자바스크립트</p>
+    <p>JQuery</p>
+    <p>React</p>
+
+    <script>
+        function fn_A(){
+        let p1 = document.getElementById("demo1");
+        p1.style.display = "none"
+        }
+    </script>
+</body>
+</html>

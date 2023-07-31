@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <p id="demo"></p>
+    <script>
+        let jumsu = 100;
+
+        let rank = "";
+
+        if (jumsu >= 90) {
+        rank = "A입니다";
+        }
+        else if(jumsu  >= 80){
+            rank = "B입니다";
+        }
+        else if(jumsu >= 70) {
+            rank = "C입니다";
+        }
+        else if(jumsu >= 60) {
+            rank = "D입니다";
+        }
+        else {
+            rank = "F입니다";
+        }
+        
+        document.getElementById("demo").innerHTML = jumsu + "점   " +rank;
+    </script>
+</body>
+</html>

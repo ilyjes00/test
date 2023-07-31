@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>비동기 방식예제 promise로 전환</h1>
+    <script>
+        //학교에 갑니다 -> 학교에 도착했습니다 -> 수업을듣습니다.
+        function goToSchool() {
+            console.log("학교에 갑니다.");
+
+        }
+
+        //promise 객체가 리턴되는 형태.
+        function arriveAtSchool() {
+        return new Promise(function(resolve, reject){
+            setTimeout(function(){
+                let status = Math.floor(Math.random() * 2 );
+                if (status === 1){
+                    resolve("학교에 도착했습니다."); //함수안에 기본작업이 정상적으로 이행되었을때
+                }else {
+                    reject("학교에 오다가 다쳤습니다."); // 함수안에서 기본작업이 에러가 발생했을때
+                }
+            }, 1000);
+        });
+    }
+        function cure() {
+            console.log("양호실에 가서 약을 발랐습니다.");
+        }
+        function study() {
+            console.log ("수업을 듣습니다.");
+        }
+
+
+        goToSchool();
+        //메서드 체이닝 : 메서드의 리턴타입이 모두 동일한 객체이었을떄 멧드를 점(.)으로 
+        //연결하여 구사하는 문법
+        /*arriveAtSchool()함수의 기본구문이 정상적으로 이행이 되면, then()메서드의 첫번째 매개변수.
+        기본구문이 에러가 발생하면 , catch()메서드의 익명함수가 동작된다.
+        */
+
+
+        arriveAtSchool().then(function(res) {
+            console.log(res);
+            study();
+        }).catch(function(err){
+            console.log(err);
+            cure();
+        })
+
+    </script>
+</body>
+</html>

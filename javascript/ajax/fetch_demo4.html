@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>JSON 문자열 데이터를 서버로 전송하는 작업 -PUT방식</h1>
+    <p>delete방식: 데이터를 삭제할때 사용</p>
+    <!--<form>-->
+        title: <input type="text" id="title"<br>
+        body: <textarea id="body"></textarea><br>
+        userId: <input type="text" id="userId"><br>
+        <button type="button" onclick="post();">json 데이터 서버전송하기</button>
+        <!--</form>-->
+    <script>
+        function post() {
+            //유형주소
+            let url = "https://jsonplaceholder.typicode.com/posts/1";
+
+            //입력데이터
+            let title = document.getElementById("title").value
+            let body = document.getElementById("body").value
+            let userId = document.getElementById("userId").value
+
+
+
+            fetch(url, {
+                method: "DELETE" //데이터 삭제
+                })
+
+            .then((Response) => {
+                //console.log(Response);
+                return Response.json();
+            })
+            .then((data) =>
+            console.log(data));
+            alert (data.title + "데이터가 수정되었습니다.");
+            };
+            
+        
+    </script>
+</body>
+</html>

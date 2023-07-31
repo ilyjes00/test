@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트에 여백추가</title>
+    <style>
+h1 {
+        border: 1px solid black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 80px;
+    background-color: lightblue;
+    font-family: cursive;
+}
+p {
+    font-size: 20px;
+    color: brown;
+}
+
+#hy1 { /*id hy1에 보더를이용한 테두리생성 */
+    border: 3px solid tomato;
+    font-size: 20px;
+}
+div {
+    border: 1px solid black;
+  background-color: lightblue;
+  padding-top: 50px;
+  padding-right: 30px;
+  padding-bottom: 50px;
+  padding-left: 80px;  /*하나하나 따로 명령어를사용할수도잇지만 아래와같이 위,오른쪽,아래,왼쪽 순서를외우고잇다면 간결하게도 사용이가능하다*/
+  padding: 50px 30px 50px 80px; /*다만 3개만사용할경우에는 위,왼쪽과오른쪽,아래 로분류되고 두개만사용하는경우는 위 아래,왼쪽 오른쪽이 포함되고 한개만사용하는경우는 4개다포함한다*/
+}
+    </style>
+</head>
+<body>
+    <h1>텍스트에 여백추가<br>두번째 항</h1>
+    <p style="border: 3px solid tomato;">텍스트에 여백추가</p>  <!--현재 보더를이용한 텍스트주변의 테두리생성을 style문을이용하여 두가지방법으로 추가함-->
+    <p id="hy1">텍스트에 여백추가</p>
+    <div>텍스트 테두리안에 여백추가</div>
+</body>
+</html>

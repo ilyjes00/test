@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>오늘의 현재 요일 정보 출력</h1>
+    <p id="demo"></p>
+    <script>
+        const days = ["일","월","화","수","목","금","토"]; 
+        const d = new Date();
+        d.setFullYear(2025,7,10);
+        d.setHours(10,50);
+        let year = d.getFullYear();
+        let month = (d.getMonth()+1); // 0부터시작하기 때문에 1을더함으로 몇월인지 정확하게 나타냄 Ex) 0= 1월
+        let date = d.getDate();
+        let day = days[d.getDay()];
+        let hour = d.getHours();
+        let min = d.getMinutes();
+
+        document.getElementById("demo").innerHTML = year + "년 "+ month  +"월 "+ date +"일 " + day + "요일" + hour + "시 " + min + "분";
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "../html"
+		},
+		{
+			"path": "../../../Users/i7F-21/AppData/Local/Temp/src"
+		},
+		{
+			"path": "../css"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "javascript"
+	}
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1></h1>
+    <p id="demo"></p>
+    <script>
+        // 숫자를 2로나누엇을떄 나머지가 0이면 짝수 1이면 홀수
+        let number = 33;
+        let msg = "";
+        if(number % 2 == 0){ // %는 나머지를반환함 ex) 33을 2로나눠서 (1)이 나옴으로 홀수
+            msg = "짝수";
+        }else if (number % 1 == 0){
+            msg = "홀수";
+        }
+        document.getElementById("demo").innerHTML = `${number} 으로 ${msg}입니다`;
+    </script>
+</body>
+</html>

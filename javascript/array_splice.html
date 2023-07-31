@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>배열요소 삭제및삽입.splice</h1>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+        const fruits = ["바나나", "오렌지", "사과", "망고"];
+        document.getElementById("demo1").innerHTML = fruits;
+
+        //첫항은 요소의 위치 [2] 두번째항은 제거할 요소의 수 나머진 배열추가
+        fruits.splice(2, 0, "레몬", "수박") // fruits 배열에 영향을준다
+        document.getElementById("demo2").innerHTML = fruits;
+    </script>
+</body>
+</html>

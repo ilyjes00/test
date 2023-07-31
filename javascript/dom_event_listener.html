@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>dom event listner</h1>
+    <button type="button" id="myBtn">클릭</button>
+    <p id="demo"></p>
+
+    <script>
+        //이벤트 등록
+        
+        // document.getElementById("myBtn").onclick = 자바스크립트코드;
+        document.getElementById("myBtn").addEventListener("click", displayDate);       
+        //document.getElementById("myBtn").addEventListener("over", displayDate);
+
+
+        function displayDate() {
+            document.getElementById("myBtn").innerHTML = Date();
+        }
+        
+    </script>
+</body>
+</html>
